@@ -1,24 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import AddProduct from './components/AddProduct';
+import AddSettings from './components/AddSettings';
+import PlaceOrder from './components/PlaceOrder';
+import {data} from './type'
 
 function App() {
+  var [products,setProducts]=useState<data[]>([])
+  console.log(products)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="col-12 d-flex flex-column">
+      <AddProduct products={products} setProducts={setProducts}/>
+      {products.length>0?
+      <PlaceOrder products={products}/>
+      :<></>}
+      <AddSettings/>
     </div>
   );
 }
