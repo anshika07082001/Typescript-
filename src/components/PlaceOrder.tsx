@@ -40,7 +40,7 @@ const PlaceOrder = (props:placeOrderprops) => {
             <form onSubmit={(e)=>placeOrder(e)}>
                 <div className='col-12 p-2 d-flex align-items-center justify-content-between'>
                     <label>Customer Name </label>
-                    <input placeholder='Enter Customer Name...' className='p-2' ref={name}/>
+                    <input placeholder='Enter Customer Name...' className='p-2' ref={name} type='text'/>
                 </div>
                 <div className='col-12 p-2 d-flex align-items-center justify-content-between'>
                     <label>Customer Address </label>

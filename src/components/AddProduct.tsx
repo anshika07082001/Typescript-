@@ -56,7 +56,7 @@ const AddProduct = (props:addproductProps) => {
             <form onSubmit={(e)=>submitForm(e)}>
                 <div className='col-12 p-2 d-flex align-items-center justify-content-between'>
                     <label>Product Name </label>
-                    <input placeholder='Enter Product Name...' className='p-2' ref={nameRef}/>
+                    <input placeholder='Enter Product Name...' className='p-2' ref={nameRef} type='text'/>
                 </div>
                 <div className='col-12 p-2 d-flex align-items-center justify-content-between'>
                     <label>Description</label>
@@ -64,11 +64,11 @@ const AddProduct = (props:addproductProps) => {
                 </div>
                 <div className='col-12 p-2 d-flex align-items-center justify-content-between'>
                     <label>Product Price </label>
-                    <input placeholder='Enter Product Price...' className='p-2' ref={priceRef}/>
+                    <input placeholder='Enter Product Price...' className='p-2' ref={priceRef} type='number'/>
                 </div>
                 <div className='col-12 p-2 d-flex align-items-center justify-content-between'>
                     <label>Product Tags</label>
-                    <input placeholder='Enter Product Tags...' className='p-2' ref={tagRef}/>
+                    <input placeholder='Enter Product Tags...' className='p-2' ref={tagRef} type='text'/>
                 </div>
                 <div className='col-12 p-2 d-flex align-items-center justify-content-between'>
                     <label>Product Stock </label>
